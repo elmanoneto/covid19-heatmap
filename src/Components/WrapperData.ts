@@ -13,6 +13,11 @@ const WrapperData = styled.section<{ background: string }>`
     justify-content: space-evenly;
     background-color: ${props => props.background};
 
+    @media (max-width: 768px) {
+        min-width: 100%;
+        margin: 5px 0px 0;
+    }
+
     h3 {
         font-weight: normal;
     }
