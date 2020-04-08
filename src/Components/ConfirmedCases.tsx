@@ -9,7 +9,7 @@ interface IResume {
 const ConfirmedCases = ({ total_confirmation }: IResume) => {
     return (
         <WrapperData background="#FFA502">
-            <h3>Taxa de letalidade</h3>
+            <h3>Casos confirmados</h3>
             <p>{total_confirmation}</p>
         </WrapperData>
     )

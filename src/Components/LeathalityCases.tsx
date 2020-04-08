@@ -10,7 +10,7 @@ interface IResume {
 const LeathalityCases = ({ total_leathality }: IResume) => {
     return (
         <WrapperData background="#FF0100">
-            <h3>Casos confirmados</h3>
+            <h3>Taxa de letalidade</h3>
             <p>{total_leathality}</p>
         </WrapperData>
     )

@@ -68,7 +68,6 @@ const App: React.FC = () => {
                 setHeatmapData({ positions: handledData, options: { opacity: 0.7, radius: 100 } })
 
                 const resumed = await http.get('/all')
-
                 setResume(resumed.data[0] as IResume)
             } catch (error) {
                 console.log(error)
