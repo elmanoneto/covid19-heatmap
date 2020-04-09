@@ -26,7 +26,6 @@ interface IProps {
     data: IData
 }
 
-
 const HeatMap = ({ data }: IProps) => {
     const [center] = useState<ICenter>({
         lat: -10.1689,

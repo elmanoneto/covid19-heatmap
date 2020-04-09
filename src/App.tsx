@@ -74,7 +74,7 @@ const App: React.FC = () => {
             return { lat: +city.lat, lng: +city.lng, weight: +city.qtd_confirmation }
         })
     }
-
+    
     const renderMap = () => {
         return loading ? (
             <BeatLoader
