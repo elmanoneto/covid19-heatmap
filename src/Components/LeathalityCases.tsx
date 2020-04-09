@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import WrapperData from './WrapperData'
 
@@ -10,6 +9,7 @@ interface IResume {
 const LeathalityCases = ({ total_leathality }: IResume) => {
     return (
         <WrapperData background="#FF0100">
+            <i className="fa fa-percent" aria-hidden="true"></i>
             <h3>Taxa de letalidade</h3>
             <p>{total_leathality}</p>
         </WrapperData>

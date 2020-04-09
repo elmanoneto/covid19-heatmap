@@ -18,6 +18,11 @@ const WrapperData = styled.section<{ background: string }>`
         margin: 5px 0px 0;
     }
 
+    i {
+        font-weight: normal;
+        font-size: 24px;
+    }
+
     h3 {
         font-weight: normal;
     }

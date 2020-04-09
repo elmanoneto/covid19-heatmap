@@ -9,6 +9,7 @@ interface IResume {
 const DeathCaes = ({ total_death }: IResume) => {
     return (
         <WrapperData background="#000">
+            <i className="far fa-dizzy white-text"></i>
             <h3 className="white-text">Total de mortos</h3>
             <p className="white-text">{total_death}</p>
         </WrapperData>

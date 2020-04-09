@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import GoogleMapReact from 'google-map-react'
 import BeatLoader from "react-spinners/ClipLoader";
 import styled from 'styled-components'
 
@@ -9,11 +8,7 @@ import Footer from './Components/Footer'
 import ConfirmedCases from './Components/ConfirmedCases'
 import LeathalityCases from './Components/LeathalityCases'
 import DeathCases from './Components/DeathCases'
-
-interface ICenter {
-    lat: number
-    lng: number
-}
+import HeatMap from './Components/HeatMap'
 
 interface IData {
     positions: IPositions[]
@@ -46,11 +41,6 @@ interface IResume {
 }
 
 const App: React.FC = () => {
-    const [center, setCenter] = useState<ICenter>({
-        lat: -10.1689,
-        lng: -48.3317
-    })
-    const [zoom, setZoom] = useState<number>(5)
     const [heatpmapData, setHeatmapData] = useState<IData>()
     const [loading, setLoading] = useState<boolean>(true)
     const [resume, setResume] = useState<IResume>({
@@ -93,16 +83,7 @@ const App: React.FC = () => {
                 loading={loading}
             />
         ) : (
-            <GoogleMapReact 
-                bootstrapURLKeys={{
-                    key: String(process.env.REACT_APP_GOOGLE_API_KEY),
-                    libraries: 'visualization'
-                }}
-                defaultCenter={center}
-                defaultZoom={zoom}
-                heatmapLibrary={true}
-                heatmap={heatpmapData}
-            />
+            <HeatMap data={heatpmapData || {} as IData}/>
         )
     }
 
